@@ -7,14 +7,15 @@ import { router as apiRouter } from './routes/index.js';
 import { errorHandler } from './middleware/errorHandler.js';
 import { initDatabase } from './config/db.js';
 
-dotenv.config({ path: isProduction ? '../.env' : '../.env.local' });
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const isProduction = process.env.NODE_ENV === 'production';
+
+dotenv.config({ path: isProduction ? '../.env' : '../.env.local' });
+
 const app = express();
 const PORT = process.env.PORT || 5000;
-const isProduction = process.env.NODE_ENV === 'production';
 
 // ─── Middleware ───────────────────────────────────────────
 app.use(cors({
@@ -33,8 +34,8 @@ app.get('/api/health', (_req, res) => {
 });
 
 // ─── Serve Static Client (Production) ────────────────────
+const clientDist = path.join(__dirname, '..', '..', 'client', 'dist');
 if (isProduction) {
-  const clientDist = path.join(__dirname, '..', '..', 'client', 'dist');
   app.use(express.static(clientDist));
   app.get('*', (_req, res) => {
     res.sendFile(path.join(clientDist, 'index.html'));
