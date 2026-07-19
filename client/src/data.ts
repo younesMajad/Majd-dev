@@ -3,33 +3,33 @@ import { Project, Service, Experience, Testimonial } from './types';
 export const PROJECTS: Project[] = [
   {
     id: 'E-commerce website ',
-    title: 'E-commerce website ',
+    title: 'E-commerce Platform',
     category: 'Development',
-    description: 'An AI-powered real-time data visualizer with dynamic widget layouts and canvas animations.',
-    longDescription: 'Nexus is a comprehensive analytical platform designed for high-scale enterprise operations. It integrates real-time telemetry pipelines, custom WebGL canvas charts, and modular grids to deliver millisecond-level responsiveness. The project required deep optimization of React rendering cycles and heavy leverage of memory-efficient data structures.',
+    description: 'A full-featured online shopping platform with product catalog, cart management, and secure checkout flow.',
+    longDescription: 'A modern e-commerce solution built from the ground up to deliver a seamless shopping experience. The platform features a dynamic product catalog with advanced filtering and search, a persistent cart system, user authentication, and a streamlined checkout process with payment integration. Designed for performance and scalability, it handles product inventory, order tracking, and responsive layouts across all devices.',
     image: 'src/assets/images/project-ecommerce.png',  
-    tags: ['React', 'TypeScript', 'Tailwind', 'Vite'],
-    client: 'Zenith Labs Inc.',
+    tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Tailwind CSS'],
+    client: 'E-commerce Client',
     year: '2025',
     link: '#',
-    role: 'E-commerce website ',
-    challenge: 'Handling over 50,000 real-time data points per second with complex mathematical aggregations, without causing lag or frame drops in browser animations.',
-    solution: 'Implemented Web Workers to deserialize and aggregate data off the main thread, utilizing SharedArrayBuffers and HTML5 Canvas for ultra-fast rendering.'
+    role: 'Full-Stack Developer',
+    challenge: 'Building a fast, reliable shopping experience with real-time inventory updates, secure payment processing, and a responsive UI that works flawlessly on mobile and desktop.',
+    solution: 'Implemented a RESTful API with Node.js and Express, paired with a React frontend using contextual state management for cart persistence. Integrated secure payment handling and optimized database queries for fast product loading.'
   },
   {
     id: 'Beirouk',
-    title: 'start up company ',
+    title: 'Beirouk Startup',
     category: 'Branding',
-    description: 'A premium, high-contrast visual guideline and interactive digital stylebook for a luxury brand.',
-    longDescription: 'Aurelia is a luxury Swiss watch brand targeting next-generation collectors. We crafted a highly editorial visual system centered on timeless geometric harmony, spacious off-white canvases, and delicate dark-chocolate typography. The project delivered a full interactive brand portal with live-updating asset downloads.',
+    description: 'A complete brand identity and digital presence for an emerging startup venture.',
+    longDescription: 'Beirouk is an early-stage startup requiring a strong, memorable brand identity to stand out in a competitive market. We developed a full visual identity system including logo design, color palette, typography, and a cohesive digital style guide. The project extended to crafting a landing page and social media assets that communicate the brand\'s vision and values with clarity and impact.',
     image: '/src/assets/images/beirouk.png',
-    tags: [ 'Brand Strategy', 'Typography', 'Illustrator'],
-    client: 'services ',
+    tags: ['Brand Identity', 'Logo Design', 'UI Design', 'Figma'],
+    client: 'Beirouk Startup',
     year: '2025',
     link: '#',
-    role: 'Lead Brand Strategist & UI Designer',
-    challenge: 'Translating a 150-year heritage of physical watchcraft into a modern, fluid digital design system that feels premium and tactile.',
-    solution: 'Established a layout style governed by the Golden Ratio, using sharp editorial grid dividers, micro-interactions, and high-fidelity video loops of watch movements.'
+    role: 'Brand Designer & UI Designer',
+    challenge: 'Creating a distinctive brand identity from scratch that resonates with the target audience while remaining versatile enough for digital and print applications.',
+    solution: 'Developed a flexible design system with a bold logo mark, curated color palette, and typography hierarchy. Built a responsive landing page to showcase the brand and validate market interest.'
   },
   {
     id: 'ethera-app',
@@ -48,18 +48,18 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'Gym',
-    title: 'Nova Editorial Landing Page',
+    title: 'Gym & Fitness Website',
     category: 'Development',
-    description: 'A typographic-first, grid-aligned promotional landing page with high-performance scroll physics.',
-    longDescription: 'Nova is a modern web experiment celebrating swiss minimalism. We discarded standard templates, utilizing strict border grids, large grotesque display typography, and asymmetrical layouts. The page features smooth scroll-triggered scroll-sections and fluid image zoom sequences.',
+    description: 'A high-energy fitness website with class schedules, trainer profiles, and membership signup.',
+    longDescription: 'A bold, motivating website designed for a modern gym and fitness center. The site features dynamic class schedules, trainer profile showcases, membership plan comparisons, and an integrated signup flow. Built with performance and visual impact in mind, it uses scroll-driven animations and high-contrast imagery to capture the energy of the fitness brand.',
     image: '/src/assets/images/gym.png',
-    tags: ['React', 'Motion', 'Tailwind CSS', 'Vite'],
-    client: 'Nova Lab',
+    tags: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
+    client: 'Gym & Fitness Center',
     year: '2023',
     link: '#',
-    role: 'Front-End Engineer',
-    challenge: 'Achieving consistent 60fps scroll transitions and heavy imagery lazy-loading across all modern desktop and mobile browsers.',
-    solution: 'Utilized Motion layout orchestrations and CSS hardware acceleration, disabling active JavaScript scroll listners in favor of native CSS scroll-driven animations.'
+    role: 'Front-End Developer',
+    challenge: 'Creating an immersive, fast-loading website that conveys energy and motivation while maintaining usability for class booking and membership management.',
+    solution: 'Leveraged Framer Motion for scroll-triggered animations and CSS hardware acceleration for smooth transitions. Built a modular component system for class schedules and trainer cards that adapts seamlessly across devices.'
   }
 ];
 
