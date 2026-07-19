@@ -96,7 +96,7 @@ export default function Hero({ onExploreProjects }: HeroProps) {
             <div className="relative p-3 rounded-[32px] border border-gray-200 bg-white backdrop-blur-sm shadow-md overflow-hidden transition-all duration-500 group-hover:border-black">
               <div className="relative aspect-square w-64 md:w-72 lg:w-80 rounded-2xl overflow-hidden bg-gray-50">
                 <img 
-                  src="/src/assets/images/me-2.jpeg" 
+                  src="/images/me-2.jpeg" 
                   alt="Portrait" 
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 filter contrast-110 brightness-95"
