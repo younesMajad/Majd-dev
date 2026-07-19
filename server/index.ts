@@ -7,7 +7,7 @@ import { router as apiRouter } from './routes/index.js';
 import { errorHandler } from './middleware/errorHandler.js';
 import { initDatabase } from './config/db.js';
 
-dotenv.config({ path: '../.env.local' });
+dotenv.config({ path: isProduction ? '../.env' : '../.env.local' });
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
