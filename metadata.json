@@ -1,0 +1,7 @@
+{
+  "name": "Majd Portfolio",
+  "description": "A premium, modular portfolio website inspired by the Majd-dev , work showcase, interactive experience timeline, and high-end visual design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"],
+  "icons":"src/assets/images/logo.jpeg"
+}
