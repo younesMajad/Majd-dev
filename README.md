@@ -61,21 +61,6 @@ The codebase is organized as follows:
 
 Our visual identity is defined by visual rhythm, minimalism, and strict border grids. 
 
-### Font Theme (Configured in `src/index.css`)
-We define four utility font families:
-- **`font-sans`:** `Inter` — Used for body copy, paragraphs, and descriptions.
-- **`font-display`:** `Plus Jakarta Sans` — Used for headings, titles, and section titles.
-- **`font-serif`:** `Playfair Display` — Used for stylized italic overlays.
-- **`font-mono`:** `JetBrains Mono` — Used for technical stats, dates, category indicators, buttons, and system clocks.
-
-### Core Spacing and Visual Rhythm
-1. **Border Grids:** Use clean, subtle dividers (`border-gray-200`) and border wrappers to frame components.
-2. **Minimal Grayscale:** Prioritize a clean, high-contrast palette. Background `#F8F9FA`, main text `#1A1A1A`. Accentuate using subtle grayscale levels (`text-gray-400`, `text-gray-500`).
-3. **Interactive Grayscale Transition:** Images should render in grayscale with high contrast by default (`filter grayscale contrast-110`). On hover, transition them smoothly to full color (`group-hover:grayscale-0`).
-4. **Interactive Hover States:** Standard components should use elegant transitions (`transition-all duration-300`, `group-hover:border-black`, subtle hardware-accelerated scaling up to `1.03` or `1.05`).
-
----
-
 ## 4. Engineering & Code Standards
 
 ### Strict Type Safety
@@ -83,30 +68,8 @@ We define four utility font families:
 - **Data Extensibility:** If you add new portfolio metrics, projects, services, or work experiences, ensure you add them to `src/data.ts` adhering strictly to the interfaces defined in `src/types.ts`.
 - **Suppressing Warnings:** Never suppress linter rules, type checking, or compile-time warnings. Use explicit typescript declarations.
 
-### Smooth Scroll Implementation
-Anchor navigation scroll offsets are handled programmatically to avoid being covered by the sticky navbar. Standardize on the following formula for scrolling offsets:
-```typescript
-const offset = 80; // height of floating navigation
-const bodyRect = document.body.getBoundingClientRect().top;
-const elementRect = element.getBoundingClientRect().top;
-const elementPosition = elementRect - bodyRect;
-const offsetPosition = elementPosition - offset;
 
-window.scrollTo({
-  top: offsetPosition,
-  behavior: 'smooth'
-});
-```
 
 ### Code Splitting & Modularity
 - Keep `App.tsx` clean. It should only manage top-level page state, the 3D scroll presets controller, and serve as the main page shell.
 - All discrete pages or layouts must be isolated as self-contained React functional components in `src/components/`.
-
----
-
-## 5. Potential AI / Server Extensions
-
-If integrating Server-Side Gemini API or Express:
-- **API Setup:** Place any backend controllers inside an Express `server.js` or separate folder. Ensure `server.js` is cleaned up correctly during builds (as defined in the package `"clean"` script).
-- **Credentials:** Secure your `GEMINI_API_KEY` inside `.env.local` or environment variables. Do **not** commit keys or `.env` files to git.
-- **SDK Usage:** Leverage the new `@google/genai` library for seamless interaction with Gemini models. Maintain robust error handling and fallbacks for when API keys are missing or invalid.
