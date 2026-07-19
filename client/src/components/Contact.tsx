@@ -64,9 +64,12 @@ export default function Contact() {
   };
 
   const socials = [
-    { label: 'LinkedIn', icon: Linkedin, href: 'https//www.LinkdIn,com/Majd', handle: 'majd-design' },
+    {
+      label: 'LinkedIn',icon: Linkedin,href: 'www.linkedin.com/in/majd-younes-607305416',
+      handle: 'majd-design'
+    },
     { label: 'GitHub', icon: Github, href: 'https://www.github.com/YounesMajd', handle: 'majd-codes' },
-    {label: 'Twitter',icon: Twitter,href: 'https://www.tweets.com/Majdyounes',handle: 'majd_tweets'},
+    {label: 'Twitter',icon: Twitter,href: 'https://www.x.com/YounesMajad',handle: 'majd_tweets'},
     {label:'FaceBook' , icon:Facebook,href:'https://www.facebook.com/profile.php?id=100059986401493', handle: 'majd_facebook' },
   ];
 
@@ -97,7 +100,7 @@ export default function Contact() {
                   </div>
                   <div className="text-left">
                     <div className="text-[9px] font-mono uppercase tracking-widest text-gray-400 font-bold">EMAIL ADDRESS</div>
-                    <div className="text-xs font-semibold text-gray-800">majd@studio.design</div>
+                    <div className="text-xs font-semibold text-gray-800">majdyounes@gmail.com</div>
                   </div>
                 </div>
                 <div className="text-gray-400 group-hover:text-black transition-colors">
