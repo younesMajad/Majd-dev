@@ -1,4 +1,4 @@
-# GEMINI.md - Majd Portfolio Architecture & Conventions
+ Majd Portfolio Architecture & Conventions
 
 Welcome to **Majd Portfolio**, a premium, modular, and highly interactive digital portfolio inspired by editorial minimalism. It features high-end typography, 3D scrolling perspective dynamics, and fluid interaction states.
 
