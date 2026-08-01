@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 
 const highlights = [
   { icon: Briefcase, label: 'Experience', value: '2+ Years' },
-  { icon: GraduationCap, label: 'Education', value: 'CS Graduate' },
+  { icon: GraduationCap, label: 'Education', value: 'bac +2' },
 ];
 
 export default function About() {
