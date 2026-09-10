@@ -47,14 +47,7 @@ export default function Testimonials() {
 
               {/* Client Info Block */}
               <div className="flex items-center gap-4 mt-8 border-t border-gray-100 pt-6">
-                <div className="h-10 w-10 rounded-full overflow-hidden border border-gray-200 bg-gray-50">
-                  <img
-                    src={review.avatar}
-                    alt={review.name}
-                    referrerPolicy="no-referrer"
-                    className="h-full w-full object-cover filter grayscale contrast-110"
-                  />
-                </div>
+              
                 <div>
                   <h4 className="font-display font-bold text-xs text-gray-800 group-hover:text-black transition-colors">
                     {review.name}

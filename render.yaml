@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: majd-portfolio-api
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm ci && npm run build:server
+    startCommand: cd server && node dist/index.js
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CLIENT_URL
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false

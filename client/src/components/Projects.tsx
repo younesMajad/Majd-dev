@@ -22,9 +22,17 @@ export default function Projects() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div className="text-left">
             <span className="font-mono text-[10px] uppercase tracking-widest text-gray-400 font-bold block mb-2">PORTFOLIO</span>
-            <h2 className="font-display font-bold text-3xl md:text-4xl text-[#1A1A1A] tracking-tight">
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-[#1A1A1A] tracking-tight mb-4">
               Selected Creations.
             </h2>
+            <a 
+              href="https://github.com/younesMajad" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-mono tracking-wider text-gray-500 hover:text-black transition-colors"
+            >
+              <Code className="h-4 w-4" /> View All Projects on GitHub
+            </a>
           </div>
 
           {/* Filtering buttons */}
@@ -222,6 +230,20 @@ export default function Projects() {
                       ))}
                     </div>
                   </div>
+
+                  {/* Live Demo / Link Button */}
+                  {selectedProject.link && (
+                    <div className="mt-4">
+                      <a
+                        href={selectedProject.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 w-full py-3.5 px-4 bg-black text-white font-mono text-xs uppercase tracking-widest rounded-full hover:bg-gray-800 transition-colors shadow-md hover:shadow-xl active:scale-95 duration-200"
+                      >
+                        Live Demo <ArrowUpRight className="h-4 w-4" />
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.div>
