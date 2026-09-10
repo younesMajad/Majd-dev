@@ -2,7 +2,6 @@
 
 Welcome to **Majd Portfolio**, a premium, modular, and highly interactive digital portfolio inspired by editorial minimalism. It features high-end typography, 3D scrolling perspective dynamics, and fluid interaction states.
 
-This document serves as the foundational mandate for all development work, architectural patterns, styling guidelines, and tool workflows in this repository.
 
 ---
 
@@ -13,8 +12,6 @@ This document serves as the foundational mandate for all development work, archi
 - **Build Tool:** Vite 6
 - **Styling Engine:** Tailwind CSS v4 (with custom `@theme` configuration)
 - **Animation Engine:** Motion v12 (`motion/react`)
-- **Icon Set:** `lucide-react`
-- **Utility/Backend Preparation:** `@google/genai` (v2.4.0) & Express (v4.21.2) are installed for potential AI-powered server-side capabilities.
 
 ### Development Environment & HMR Control
 To support heavy automated edits without causing excessive CPU usage or browser flickering in AI Studio, `vite.config.ts` includes a performance control block:
@@ -69,7 +66,3 @@ Our visual identity is defined by visual rhythm, minimalism, and strict border g
 - **Suppressing Warnings:** Never suppress linter rules, type checking, or compile-time warnings. Use explicit typescript declarations.
 
 
-
-### Code Splitting & Modularity
-- Keep `App.tsx` clean. It should only manage top-level page state, the 3D scroll presets controller, and serve as the main page shell.
-- All discrete pages or layouts must be isolated as self-contained React functional components in `src/components/`.
