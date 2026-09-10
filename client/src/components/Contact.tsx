@@ -2,6 +2,15 @@ import React, { useState, useEffect, FormEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Mail, Github, Linkedin, Twitter, ArrowUpRight, Copy, Check, Clock, Send, Globe, Facebook } from 'lucide-react';
 import { api } from '../lib/api';
+import emailjs from '@emailjs/browser';
+
+const EMAILJS = {
+  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+};
+
+const emailReady = !!EMAILJS.serviceId && !!EMAILJS.templateId && !!EMAILJS.publicKey;
 
 export default function Contact() {
   const [timeString, setTimeString] = useState('');
@@ -46,7 +55,16 @@ export default function Contact() {
 
     setIsSubmitting(true);
     try {
-      await api.post('/contact', { name, email, message });
+      if (emailReady) {
+        await emailjs.send(
+          EMAILJS.serviceId,
+          EMAILJS.templateId,
+          { from_name: name, email, message, reply_to: email },
+          { publicKey: EMAILJS.publicKey }
+        );
+      } else {
+        await api.post('/contact', { name, email, message });
+      }
       setFormSubmitted(true);
       setName('');
       setEmail('');
